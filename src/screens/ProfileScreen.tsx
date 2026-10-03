@@ -1,5 +1,5 @@
-import React, { useState, useRef } from 'react';
-import { Shield, Users, FileSignature, ChevronRight, Lock, Edit2 } from 'lucide-react';
+import React, { useRef } from 'react';
+import { Shield, Users, FileSignature, ChevronRight, Edit2 } from 'lucide-react';
 
 interface ProfileProps {
   profilePic: string | null;
@@ -7,7 +7,7 @@ interface ProfileProps {
 }
 
 const ProfileScreen: React.FC<ProfileProps> = ({ profilePic, setProfilePic }) => {
-  const [privacyEnabled, setPrivacyEnabled] = useState(true);
+
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
