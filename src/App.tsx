@@ -11,6 +11,7 @@ function App() {
   const [isAlertActive, setIsAlertActive] = useState(false);
   const [battery, setBattery] = useState(85);
   const [showNav, setShowNav] = useState(true);
+  const [profilePic, setProfilePic] = useState<string | null>(null);
   const lastScrollY = useRef(0);
   const contentRef = useRef<HTMLElement>(null);
 
@@ -87,7 +88,7 @@ function App() {
       case 'reports':
         return <ReportScreen />;
       case 'profile':
-        return <ProfileScreen />;
+        return <ProfileScreen profilePic={profilePic} setProfilePic={setProfilePic} />;
       default:
         return <DashboardScreen onSimulateAlert={triggerAlert} />;
     }
@@ -110,7 +111,7 @@ function App() {
             <h1 style={{ fontSize: '1.25rem', color: 'var(--color-text-main)', margin: 0, fontWeight: 700 }}>Hola, Laura</h1>
             <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginTop: '2px' }}>
               <img 
-                src="/foto-tomas.jpg" 
+                src={profilePic || "/foto-tomas.jpg"} 
                 alt="Tomás" 
                 onError={(e) => { e.currentTarget.src = "https://ui-avatars.com/api/?name=Tomas&background=c3b9f0&color=1e2a58&rounded=true" }}
                 style={{ width: '20px', height: '20px', borderRadius: '50%', objectFit: 'cover', border: '1px solid var(--color-accent-light)' }} 

@@ -166,7 +166,7 @@ const DashboardScreen: React.FC<DashboardProps> = ({ onSimulateAlert }) => {
       </div>
 
       {/* Support Section */}
-      <div style={{ marginTop: '1rem', padding: '1.5rem', backgroundColor: 'var(--color-bg-card-alt)', borderRadius: '16px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
+      <div style={{ marginTop: '0.5rem', padding: '1rem 1.5rem', backgroundColor: 'var(--color-bg-card-alt)', borderRadius: '16px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
         <div style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--color-text-main)' }}>¿Necesitás ayuda técnica?</div>
         <button 
           onClick={() => window.open('https://mail.google.com/mail/?view=cm&fs=1&to=joacodeluca2009@gmail.com&su=Solicitud%20de%20Soporte%20Técnico%20-%20AutVoz&body=Hola%20equipo%20técnico%20AutVoz,%20tengo%20un%20problema.', '_blank')}

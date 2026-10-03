@@ -127,7 +127,7 @@ h1, h2, h3, h4, h5, h6 {
 .content-area {
   flex: 1;
   padding: 1.5rem;
-  padding-bottom: 90px; /* Reduced space so it's not too long, but clears navbar */
+  padding-bottom: 75px; 
   overflow-y: auto;
 }
 

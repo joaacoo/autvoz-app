@@ -1,16 +1,56 @@
-import React, { useState } from 'react';
-import { Shield, Users, FileSignature, ChevronRight, Lock } from 'lucide-react';
+import React, { useState, useRef } from 'react';
+import { Shield, Users, FileSignature, ChevronRight, Lock, Edit2 } from 'lucide-react';
 
-const ProfileScreen: React.FC = () => {
+interface ProfileProps {
+  profilePic: string | null;
+  setProfilePic: (val: string) => void;
+}
+
+const ProfileScreen: React.FC<ProfileProps> = ({ profilePic, setProfilePic }) => {
   const [privacyEnabled, setPrivacyEnabled] = useState(true);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      setProfilePic(URL.createObjectURL(file));
+    }
+  };
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', animation: 'fadeIn 0.3s ease' }}>
       
       <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1rem', background: 'var(--color-bg-card)', borderRadius: '16px' }}>
-        <div style={{ width: '60px', height: '60px', borderRadius: '50%', background: 'var(--color-accent-medium)', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.5rem', fontWeight: 600 }}>
-          T
+        <div 
+          style={{ 
+            width: '60px', height: '60px', borderRadius: '50%', background: 'var(--color-accent-medium)', color: 'white', 
+            display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.5rem', fontWeight: 600,
+            position: 'relative', cursor: 'pointer'
+          }}
+          onClick={() => fileInputRef.current?.click()}
+        >
+          <img 
+            src={profilePic || "/foto-tomas.jpg"} 
+            alt="Tomás"
+            onError={(e) => { e.currentTarget.src = "https://ui-avatars.com/api/?name=Tomas&background=617ad8&color=ffffff&rounded=true" }}
+            style={{ width: '100%', height: '100%', borderRadius: '50%', objectFit: 'cover' }}
+          />
+          <div style={{
+            position: 'absolute', bottom: -2, right: -2, background: 'var(--color-bg-card)', borderRadius: '50%', padding: '4px',
+            boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+          }}>
+            <div style={{ background: 'var(--color-accent-light)', borderRadius: '50%', width: '20px', height: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <Edit2 size={12} color="white" />
+            </div>
+          </div>
         </div>
+        <input 
+          type="file" 
+          accept="image/*" 
+          ref={fileInputRef} 
+          style={{ display: 'none' }} 
+          onChange={handleImageUpload}
+        />
         <div>
           <h2 style={{ fontSize: '1.25rem', margin: 0, color: 'var(--color-text-main)' }}>Tomás López</h2>
           <p style={{ margin: 0, fontSize: '0.9rem', color: '#64748b' }}>Grado 2 - TEA</p>

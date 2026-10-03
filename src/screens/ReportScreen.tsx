@@ -3,7 +3,7 @@ import { Download, FileText, Share2, TrendingUp, ShieldAlert, CheckCircle } from
 
 const ReportScreen: React.FC = () => {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', animation: 'fadeIn 0.3s ease' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', animation: 'fadeIn 0.3s ease', paddingBottom: '3rem' }}>
       <h2 style={{ fontSize: '1.25rem', margin: 0, color: 'var(--color-blue-institutional)' }}>Puente Terapéutico</h2>
       
       <div className="card" style={{ background: 'linear-gradient(135deg, var(--color-blue-institutional) 0%, #1e2a58 100%)', color: 'white' }}>
@@ -39,8 +39,11 @@ const ReportScreen: React.FC = () => {
          <h3 style={{ fontSize: '1rem', color: 'var(--color-text-main)', margin: 0 }}>Historial de Reportes</h3>
          
          {[
-           { mes: 'Septiembre 2026', estado: 'Enviado' },
-           { mes: 'Agosto 2026', estado: 'Generado' },
+           { mes: 'Octubre 2026', estado: 'Borrador' },
+           { mes: 'Septiembre 2026', estado: 'Enviado a Terapeuta' },
+           { mes: 'Agosto 2026', estado: 'Enviado a Escuela' },
+           { mes: 'Julio 2026', estado: 'Archivado' },
+           { mes: 'Junio 2026', estado: 'Archivado' },
          ].map((rep, i) => (
            <div key={i} className="card" style={{ padding: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
