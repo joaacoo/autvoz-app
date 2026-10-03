@@ -128,42 +128,6 @@ const DashboardScreen: React.FC<DashboardProps> = ({ onSimulateAlert }) => {
         </div>
       </div>
 
-      {/* Quick Intervention Feature */}
-      <div style={{ marginTop: '1rem' }}>
-        <div style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--color-text-main)', marginBottom: '1rem' }}>
-          Intervención Rápida
-        </div>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
-          <button 
-            className="btn" 
-            style={{ backgroundColor: 'var(--color-accent-medium)', color: 'white', padding: '1rem', borderRadius: '12px', fontSize: '0.9rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}
-            onClick={() => setActionMessage("Se ha enviado el comando al reloj de Tomás para reproducir su lista de música relajante.")}
-          >
-            Música Calma
-          </button>
-          <button 
-            className="btn" 
-            style={{ backgroundColor: 'var(--color-accent-light)', color: 'white', padding: '1rem', borderRadius: '12px', fontSize: '0.9rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}
-            onClick={() => setActionMessage("El mensaje de voz ha sido enviado y se reproducirá en el dispositivo de Tomás.")}
-          >
-            Enviar Audio
-          </button>
-          <button 
-            className="btn" 
-            style={{ backgroundColor: 'var(--color-yellow-rumble)', color: 'white', padding: '1rem', borderRadius: '12px', fontSize: '0.9rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}
-            onClick={() => setActionMessage("Se ha abierto el formulario en la bitácora para registrar la observación actual.")}
-          >
-            Anotar Estado
-          </button>
-          <button 
-            className="btn" 
-            style={{ backgroundColor: 'var(--color-text-main)', color: 'white', padding: '1rem', borderRadius: '12px', fontSize: '0.9rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}
-            onClick={() => setActionMessage("Iniciando llamada de emergencia al dispositivo de Tomás...")}
-          >
-            Llamar a Tomás
-          </button>
-        </div>
-      </div>
 
       {/* Support Section */}
       <div style={{ marginTop: '0.5rem', padding: '1rem 1.5rem', backgroundColor: 'var(--color-bg-card-alt)', borderRadius: '16px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>

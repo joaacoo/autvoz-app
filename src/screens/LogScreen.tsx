@@ -76,7 +76,7 @@ const LogScreen: React.FC = () => {
 
       <div className="card">
          <h3 style={{ fontSize: '1rem', marginBottom: '1rem', color: 'var(--color-text-main)' }}>Tendencias Semanales</h3>
-         <div style={{ height: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--color-bg-card-alt)', borderRadius: '8px', color: 'var(--color-accent-medium)', fontSize: '0.9rem' }}>
+         <div style={{ height: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--color-bg-card-alt)', borderRadius: '8px', color: 'var(--color-accent-medium)', fontSize: '0.75rem', textAlign: 'center', padding: '1rem' }}>
            [ Gráfico de Mapa de Calor (Próximamente) ]
          </div>
       </div>

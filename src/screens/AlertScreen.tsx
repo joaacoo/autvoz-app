@@ -26,7 +26,7 @@ const AlertScreen: React.FC<AlertScreenProps> = ({ onDismiss }) => {
           <div>
             <h2 style={{ color: 'white', margin: 0, fontSize: '1.25rem', marginBottom: '0.5rem' }}>Alerta Preventiva</h2>
             <p style={{ margin: 0, opacity: 0.9, fontSize: '0.9rem' }}>
-              Ventana de acción estimada: <strong>45 a 60 segundos</strong> antes de posible sobrecarga.
+              Ventana de acción estimada antes de posible sobrecarga.
             </p>
           </div>
         </div>

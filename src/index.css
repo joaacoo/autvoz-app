@@ -164,8 +164,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-item.active {
-  color: var(--color-text-main); /* Azul oscuro for active */
-  background-color: #f1f5f9; /* Gris muy claro (slate-100) */
+  color: var(--color-blue-institutional);
+  background-color: var(--color-bg-card-alt);
 }
 
 .nav-item:hover:not(.active) {
@@ -191,6 +191,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @keyframes pulse-calm {
   0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
   70% { box-shadow: 0 0 0 20px rgba(16, 185, 129, 0); }

@@ -64,7 +64,7 @@ const ProfileScreen: React.FC<ProfileProps> = ({ profilePic, setProfilePic }) =>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: '0.75rem', borderBottom: '1px solid #e2e8f0' }}>
              <div>
-                <div style={{ fontWeight: 500, fontSize: '0.95rem' }}>Laura (Madre)</div>
+                <div style={{ fontWeight: 500, fontSize: '0.95rem' }}>Bárbara (Madre)</div>
                 <div style={{ fontSize: '0.8rem', color: '#64748b' }}>Tutor Principal</div>
              </div>
              <span className="pill active" style={{ fontSize: '0.7rem' }}>Admin</span>
@@ -88,30 +88,11 @@ const ProfileScreen: React.FC<ProfileProps> = ({ profilePic, setProfilePic }) =>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
           <div>
             <div style={{ fontWeight: 500, fontSize: '0.95rem' }}>Escudo Ley N° 25.326</div>
-            <div style={{ fontSize: '0.8rem', color: '#64748b', maxWidth: '200px' }}>Anonimato y encriptación de biometría en la nube.</div>
-          </div>
-          
-          <div 
-            onClick={() => setPrivacyEnabled(!privacyEnabled)}
-            style={{ 
-              width: '44px', height: '24px', borderRadius: '12px', 
-              background: privacyEnabled ? 'var(--color-green-homeostasis)' : '#cbd5e1',
-              position: 'relative', cursor: 'pointer', transition: 'all 0.3s'
-            }}
-          >
-            <div style={{
-              width: '20px', height: '20px', borderRadius: '50%', background: 'white',
-              position: 'absolute', top: '2px', left: privacyEnabled ? '22px' : '2px',
-              transition: 'all 0.3s', boxShadow: '0 1px 3px rgba(0,0,0,0.2)'
-            }} />
+            <div style={{ fontSize: '0.8rem', color: '#64748b' }}>Anonimato y encriptación de biometría en la nube.</div>
           </div>
         </div>
         
-        {privacyEnabled && (
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.8rem', color: 'var(--color-green-homeostasis)', marginTop: '0.5rem' }}>
-             <Lock size={14} /> Tokenización activa
-          </div>
-        )}
+
       </div>
 
       <div className="card" style={{ background: 'linear-gradient(135deg, var(--color-bg-card-alt) 0%, white 100%)' }}>

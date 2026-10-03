@@ -108,7 +108,12 @@ function App() {
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
           <img src="/logo.png" alt="AutVoz Logo" style={{ width: '40px', height: '40px', borderRadius: '8px', objectFit: 'contain' }} />
           <div>
-            <h1 style={{ fontSize: '1.25rem', color: 'var(--color-text-main)', margin: 0, fontWeight: 700 }}>Hola, Laura</h1>
+            <h1 
+              style={{ fontSize: '1.25rem', color: 'var(--color-text-main)', margin: 0, fontWeight: 700, cursor: 'pointer' }}
+              onClick={() => setActiveTab('profile')}
+            >
+              Hola, Bárbara
+            </h1>
             <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginTop: '2px' }}>
               <img 
                 src={profilePic || "/foto-tomas.jpg"} 
