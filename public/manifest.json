@@ -1,0 +1,21 @@
+{
+  "name": "AutVoz",
+  "short_name": "AutVoz",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fffbff",
+  "theme_color": "#fffbff",
+  "description": "AutVoz - Aplicación de Comunicación",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

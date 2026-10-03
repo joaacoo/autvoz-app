@@ -1,0 +1,91 @@
+import React, { useState } from 'react';
+import { Shield, Users, FileSignature, ChevronRight, Lock } from 'lucide-react';
+
+const ProfileScreen: React.FC = () => {
+  const [privacyEnabled, setPrivacyEnabled] = useState(true);
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', animation: 'fadeIn 0.3s ease' }}>
+      
+      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1rem', background: 'var(--color-bg-card)', borderRadius: '16px' }}>
+        <div style={{ width: '60px', height: '60px', borderRadius: '50%', background: 'var(--color-accent-medium)', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.5rem', fontWeight: 600 }}>
+          T
+        </div>
+        <div>
+          <h2 style={{ fontSize: '1.25rem', margin: 0, color: 'var(--color-text-main)' }}>Tomás López</h2>
+          <p style={{ margin: 0, fontSize: '0.9rem', color: '#64748b' }}>Grado 2 - TEA</p>
+        </div>
+      </div>
+
+      <div className="card">
+        <h3 style={{ fontSize: '1rem', marginBottom: '1rem', color: 'var(--color-text-main)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <Users size={18} color="var(--color-accent-medium)" /> Equipo de Cuidado (Roles)
+        </h3>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: '0.75rem', borderBottom: '1px solid #e2e8f0' }}>
+             <div>
+                <div style={{ fontWeight: 500, fontSize: '0.95rem' }}>Laura (Madre)</div>
+                <div style={{ fontSize: '0.8rem', color: '#64748b' }}>Tutor Principal</div>
+             </div>
+             <span className="pill active" style={{ fontSize: '0.7rem' }}>Admin</span>
+           </div>
+           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+             <div>
+                <div style={{ fontWeight: 500, fontSize: '0.95rem' }}>Martín (AT)</div>
+                <div style={{ fontSize: '0.8rem', color: '#64748b' }}>Acompañante Terapéutico</div>
+             </div>
+             <ChevronRight size={18} color="#94a3b8" />
+           </div>
+           <button className="btn btn-outline" style={{ width: '100%', marginTop: '0.5rem', padding: '0.5rem' }}>Vincular Nuevo Rol</button>
+        </div>
+      </div>
+
+      <div className="card">
+        <h3 style={{ fontSize: '1rem', marginBottom: '1rem', color: 'var(--color-text-main)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <Shield size={18} color="var(--color-green-homeostasis)" /> Privacidad de Datos
+        </h3>
+        
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
+          <div>
+            <div style={{ fontWeight: 500, fontSize: '0.95rem' }}>Escudo Ley N° 25.326</div>
+            <div style={{ fontSize: '0.8rem', color: '#64748b', maxWidth: '200px' }}>Anonimato y encriptación de biometría en la nube.</div>
+          </div>
+          
+          <div 
+            onClick={() => setPrivacyEnabled(!privacyEnabled)}
+            style={{ 
+              width: '44px', height: '24px', borderRadius: '12px', 
+              background: privacyEnabled ? 'var(--color-green-homeostasis)' : '#cbd5e1',
+              position: 'relative', cursor: 'pointer', transition: 'all 0.3s'
+            }}
+          >
+            <div style={{
+              width: '20px', height: '20px', borderRadius: '50%', background: 'white',
+              position: 'absolute', top: '2px', left: privacyEnabled ? '22px' : '2px',
+              transition: 'all 0.3s', boxShadow: '0 1px 3px rgba(0,0,0,0.2)'
+            }} />
+          </div>
+        </div>
+        
+        {privacyEnabled && (
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.8rem', color: 'var(--color-green-homeostasis)', marginTop: '0.5rem' }}>
+             <Lock size={14} /> Tokenización activa
+          </div>
+        )}
+      </div>
+
+      <div className="card" style={{ background: 'linear-gradient(135deg, var(--color-bg-card-alt) 0%, white 100%)' }}>
+        <h3 style={{ fontSize: '1rem', marginBottom: '1rem', color: 'var(--color-text-main)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <FileSignature size={18} color="var(--color-accent-medium)" /> Trámites CUD
+        </h3>
+        <p style={{ fontSize: '0.85rem', color: '#64748b', marginBottom: '1rem' }}>
+          Asistente para solicitar cobertura (Leyes N° 27.043 y 24.901).
+        </p>
+        <button className="btn btn-secondary" style={{ width: '100%' }}>Descargar Modelo de Nota</button>
+      </div>
+
+    </div>
+  );
+};
+
+export default ProfileScreen;
