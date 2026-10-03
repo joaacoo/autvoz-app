@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Activity, Bell, FileText, BarChart2, User, Bluetooth, BatteryMedium, BatteryLow, BatteryFull } from 'lucide-react';
 import DashboardScreen from './screens/DashboardScreen';
 import AlertScreen from './screens/AlertScreen';

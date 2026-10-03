@@ -1,5 +1,5 @@
 import React from 'react';
-import { Download, FileText, Share2, TrendingUp, ShieldAlert, CheckCircle } from 'lucide-react';
+import { Download, FileText, Share2, CheckCircle } from 'lucide-react';
 
 const ReportScreen: React.FC = () => {
   return (
