@@ -174,10 +174,10 @@ h6 {
   color: #94a3b8;
   /* Gris para el icono y texto por defecto */
   cursor: pointer;
-  transition: all 0.6s ease;
+  transition: background-color 0.5s ease-out, color 0.1s ease, transform 0.2s ease;
   font-size: 0.75rem;
   font-weight: 600;
-  background: none;
+  background: transparent;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 12px;
@@ -186,7 +186,6 @@ h6 {
 .nav-item span {
   color: inherit;
   /* Hereda el gris o el color activo */
-  transition: color 0.6s ease;
 }
 
 .nav-item.active {
