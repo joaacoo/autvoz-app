@@ -191,7 +191,7 @@ h6 {
 .nav-item.active {
   color: #8b5cf6;
   /* Ícono y texto en el mismo lila cuando está seleccionado */
-  background-color: #edf0f5;
+  background-color: transparent;
 }
 
 .nav-item.active span {
