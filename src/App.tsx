@@ -144,8 +144,7 @@ function App() {
       <nav className={`bottom-nav ${showNav ? 'visible' : 'hidden'}`} style={{ 
         transform: showNav ? 'translateY(0)' : 'translateY(100%)',
         transition: 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-        backgroundColor: 'var(--color-bg-main)',
-        borderTop: '2px solid var(--color-accent-lilac)'
+        backgroundColor: 'var(--color-bg-main)'
       }}>
         <button 
           className={`nav-item ${activeTab === 'dashboard' ? 'active' : ''}`}
